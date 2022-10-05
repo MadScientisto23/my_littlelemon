@@ -1,5 +1,5 @@
 body {
-    background-color: ;
+    background-color: bisque;
     font-family: roboto, arial, helvetica;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -42,13 +42,23 @@ nav li:hover {
 
 section {
     display: flex;
+    margin: 0 auto;
+    flex-wrap: content;
+    border: 2px solid black;
+    gap: 5px;
 }
 
 article {
     flex: 1;
+    min-width: 0;
     border-radius:5%;
 }
 
+@media(max-width: 480px) {
+section{
+flex-direction: column;
+}
+}
 article:hover {
     transform: scale(1.10);
 }
@@ -74,11 +84,10 @@ article:hover {
 
 .our_menu {
     margin: 1.5%;
-    color: white;
+    color: darkgreen;
     position: relative;
     display: flex;
     flex-direction: column;
-    background-image: url("imgs/our_menu.jpg");
 }
 
 .our_menu a{
@@ -91,17 +100,21 @@ article:hover {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-image: url("imgs/book_a_table.jpg");
 }
 
 .opening_hours {
     margin: 1.5%;
-    color: white;
+    color: darkgreen;
     position: relative;
     display: flex;
     flex-direction: column;
-    background-image: url("imgs/opening_hours.jpg");
 }
+
+.image_articles {
+border-radius: 10%;
+min-height: 0;
+}
+
 li a {
     display: block;
     color: white;
@@ -120,18 +133,11 @@ footer div {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-}
-
-#footer_underline {
-    margin: 0;
-}
-
-#copyright {
-    margin: 0;
+    min-width: 0;
 }
 
 #img_footer {
-    height: 10vh;
+    height: 15vh;
     border: 1.5px solid black;
     padding: 8px;
 }
