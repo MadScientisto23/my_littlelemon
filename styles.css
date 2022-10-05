@@ -1,143 +1,173 @@
 body {
-    background-color: bisque;
-    font-family: roboto, arial, helvetica;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: 5%;
-    margin-right: 5%;
+  background-color: bisque;
+  font-family: "Noto Sans Display", roboto, arial, helvetica;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-header > img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 10vh;
+header > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10vh;
+  margin-bottom: 1rem;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-    background-color: darkgreen;
-    display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  background-color: darkgreen;
+  display: block;
 }
 
 nav li {
-    display: inline-block;
+  display: inline-block;
 }
 
 nav li:hover {
-    background-color: gold;
+  background-color: gold;
 }
 
 section {
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: content;
-    border: 2px solid black;
-    gap: 5px;
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: content;
+  gap: 5px;
 }
 
 article {
-    flex: 1;
-    min-width: 0;
-    border-radius:5%;
+  flex: 1;
+  min-width: 0;
+  border-radius: 1rem;
+  border: 1px solid #c4c4c4;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-@media(max-width: 480px) {
-section{
-flex-direction: column;
+article h1 {
+  padding: 1rem;
 }
+
+article h2 {
+  display: flex;
+  justify-content: center;
+}
+
+article p,
+a {
+  padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  section {
+    flex-direction: column;
+  }
+  article:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-out;
+  }
 }
 article:hover {
-    transform: scale(1.10);
+  transform: scale(1.05);
+  transition: 0.2s ease-out;
 }
 
 .promotion {
-    margin: 3%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-image: url("imgs/promotion.jpg");
-    filter: brightness(80%);
+  margin: 2%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("imgs/promotion.jpg");
+  background-size: cover;
+  background-position: 75%;
+  filter: brightness(80%);
 }
 
 .promotion h1 {
-    color: orange;
-    flex: 1;
+  color: white;
+  flex: 1;
 }
 
 .promotion p {
-    flex: 4;
-    color: white;
+  flex: 4;
+  font-weight: 600;
+  color: white;
 }
 
 .our_menu {
-    margin: 1.5%;
-    color: darkgreen;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  margin: 1.5%;
+  color: darkgreen;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.our_menu a{
-    margin-top: 10%;
+.our_menu a {
+  margin-top: 10%;
 }
 
 .book_a_table {
-    margin: 1.5%;
-    color: darkgreen;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  margin: 1.5%;
+  color: darkgreen;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .opening_hours {
-    margin: 1.5%;
-    color: darkgreen;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  margin: 1.5%;
+  color: darkgreen;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .image_articles {
-border-radius: 10%;
-min-height: 0;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  /* max-height: 200px; */
+  min-height: 0;
 }
 
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer div {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-width: 0;
 }
 
 #img_footer {
-    height: 15vh;
-    border: 1.5px solid black;
-    padding: 8px;
+  height: 15vh;
+  padding: 8px;
 }
